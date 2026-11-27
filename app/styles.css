@@ -1,0 +1,99 @@
+/* Lantern Deals — warm paper, ink text, amber lantern accent. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fff7ec;
+  color: #241a2e;
+  line-height: 1.45;
+}
+a { color: #a31621; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 48px; }
+
+header.hero {
+  background: #241a2e;
+  color: #fff7ec;
+  padding: 34px 0 26px;
+}
+.hero h1 { margin: 0; font-size: 42px; letter-spacing: -0.5px; }
+.hero h1 .lantern { color: #ffb020; }
+.hero .tagline { font-size: 18px; margin: 8px 0 0; color: #f3d9a4; font-style: italic; }
+.hero .stats { margin: 18px 0 0; font-size: 15px; color: #fff; font-weight: bold; }
+.hero .stats strong { color: #ffb020; }
+#top-strip { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.top-chip {
+  background: #3a2b4d; border: 1px solid #5b4670; border-radius: 10px;
+  padding: 8px 12px; font-size: 14px; max-width: 320px;
+}
+.top-chip .top-pct { color: #ffb020; font-weight: bold; margin-right: 8px; }
+.top-chip .top-name { font-weight: bold; }
+.top-chip .top-price { display: block; color: #e8dcc8; font-size: 13px; }
+
+.controls {
+  position: sticky; top: 0; z-index: 5;
+  background: #fff7ec; padding: 14px 0 10px;
+  border-bottom: 2px solid #241a2e;
+}
+.controls input[type="search"], .controls select {
+  font: inherit; padding: 9px 10px; border: 2px solid #241a2e;
+  border-radius: 8px; background: #fff; color: #241a2e;
+}
+.controls input[type="search"] { width: min(340px, 100%); }
+.controls .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+.controls label { font-weight: bold; font-size: 14px; }
+#categories { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.pill {
+  font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 999px;
+  border: 2px solid #241a2e; background: #fff; color: #241a2e; cursor: pointer;
+}
+.pill.active { background: #241a2e; color: #ffb020; font-weight: bold; }
+#count { font-size: 15px; font-weight: bold; margin: 14px 0 0; }
+#summary { font-size: 14px; color: #5b4a68; margin: 4px 0 0; }
+
+#grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px;
+}
+.card {
+  background: #fff; border: 1px solid #e0cfae; border-top: 5px solid #ffb020;
+  border-radius: 12px; padding: 14px 16px 16px;
+  display: flex; flex-direction: column;
+}
+.card-top { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.cat { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #7a5c00; font-weight: bold; }
+.badge { font-size: 12px; font-weight: bold; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.badge-new-low { background: #1d7a3d; color: #fff; }
+.badge-strong { background: #ffb020; color: #241a2e; }
+.badge-routine { background: #e8e0d2; color: #5b4a68; }
+.name { font-size: 19px; margin: 10px 0 4px; line-height: 1.25; }
+.store { margin: 0 0 10px; font-size: 14px; color: #5b4a68; }
+.store-name { font-weight: bold; color: #a31621; }
+.prices { margin: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.sale { font-size: 30px; font-weight: bold; color: #a31621; }
+.usual { font-size: 16px; color: #8a7a90; text-decoration: line-through; }
+.off { font-size: 15px; font-weight: bold; background: #a31621; color: #fff; padding: 2px 8px; border-radius: 6px; }
+.save { margin: 6px 0 0; font-size: 14px; }
+.evidence { font-size: 14px; background: #fdf3d7; border-left: 4px solid #ffb020; padding: 8px 10px; margin: 12px 0 0; }
+.note { font-size: 13px; color: #5b4a68; margin: 8px 0 0; }
+.meta { font-size: 12px; color: #8a7a90; margin: auto 0 0; padding-top: 12px; }
+.buy {
+  display: block; text-align: center; margin-top: 12px; padding: 10px;
+  background: #241a2e; color: #ffb020; font-weight: bold; text-decoration: none;
+  border-radius: 8px; font-size: 15px;
+}
+.buy:hover { background: #3a2b4d; }
+.empty { grid-column: 1 / -1; background: #fff; border: 1px solid #e0cfae; border-radius: 12px; padding: 28px; text-align: center; }
+
+footer { margin-top: 36px; border-top: 2px solid #241a2e; padding-top: 16px; font-size: 14px; color: #5b4a68; }
+footer h2 { font-size: 18px; color: #241a2e; margin: 0 0 6px; }
+footer p { margin: 6px 0; }
+
+@media (max-width: 860px) {
+  #grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 32px; }
+}
+@media (max-width: 560px) {
+  #grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 28px; }
+  .sale { font-size: 26px; }
+  .controls input[type="search"] { width: 100%; }
+}
