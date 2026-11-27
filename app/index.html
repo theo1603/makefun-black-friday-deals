@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern Deals — Real Black Friday Deals, Checked 27 Nov 2026</title>
+<meta name="description" content="33 real Black Friday and Cyber Monday 2026 deals, each checked at its store on 27 Nov 2026, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1><span class="lantern">🏮</span> Lantern Deals</h1>
+    <p class="tagline">Real Black Friday deals, checked by hand — and an honest word on each one.</p>
+    <p class="stats" id="summary">Loading deals…</p>
+    <div id="top-strip" aria-label="Biggest discounts"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Find a deal">
+    <input type="search" id="search" placeholder="Search a product, brand or store…" aria-label="Search deals">
+    <div class="row">
+      <label for="store">Store</label>
+      <select id="store"><option value="All">All stores</option></select>
+      <label for="discount">Discount</label>
+      <select id="discount">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="30">30% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+      <label for="sort">Sort</label>
+      <select id="sort">
+        <option value="best">Best deals first</option>
+        <option value="saving">Biggest saving ($)</option>
+        <option value="low">Lowest price</option>
+        <option value="high">Highest price</option>
+      </select>
+    </div>
+    <div id="categories" role="group" aria-label="Category"></div>
+    <p id="count">Loading…</p>
+  </section>
+
+  <section id="grid" aria-live="polite"></section>
+
+  <footer>
+    <h2>How these deals were checked</h2>
+    <p id="checked-at">All prices checked 27 Nov 2026, 07:30 UTC.</p>
+    <p>Every deal on this page was read at its store or in a deals source that names the store, on Black Friday itself, 27 November 2026. The sale price and the usual price are shown side by side, and the discount is worked out from those two prices — never typed in by hand.</p>
+    <p>Each card carries a verdict: <strong>New low</strong> means the lowest price tracked for that product; <strong>Strong price</strong> means a genuinely good cut; <strong>Routine sale</strong> means the saving is small, the price returns often, or the reference price looks inflated. Two deals on this page are routine on purpose — a finder that calls everything a bargain is no use to anyone.</p>
+    <p>Prices move fast during Black Friday week. Tap “View at Store” to confirm the live price before you buy. Store links open the store's own search for the exact product.</p>
+  </footer>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>
